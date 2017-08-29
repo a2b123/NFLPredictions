@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871066F61F53BA7D00BB1714 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871066F51F53BA7D00BB1714 /* Extensions.swift */; };
+		871066F81F53BBBA00BB1714 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871066F71F53BBBA00BB1714 /* BaseCell.swift */; };
+		871066FA1F53BBC200BB1714 /* StandingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871066F91F53BBC200BB1714 /* StandingsCell.swift */; };
 		871724F31F53B65F00D77E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871724F21F53B65F00D77E39 /* AppDelegate.swift */; };
-		871724F51F53B65F00D77E39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871724F41F53B65F00D77E39 /* ViewController.swift */; };
+		871724F51F53B65F00D77E39 /* StandingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871724F41F53B65F00D77E39 /* StandingsController.swift */; };
 		871724F81F53B65F00D77E39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871724F61F53B65F00D77E39 /* Main.storyboard */; };
 		871724FB1F53B65F00D77E39 /* NFLPredictions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 871724F91F53B65F00D77E39 /* NFLPredictions.xcdatamodeld */; };
 		871724FD1F53B65F00D77E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871724FC1F53B65F00D77E39 /* Assets.xcassets */; };
@@ -35,9 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		871066F51F53BA7D00BB1714 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		871066F71F53BBBA00BB1714 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		871066F91F53BBC200BB1714 /* StandingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsCell.swift; sourceTree = "<group>"; };
 		871724EF1F53B65F00D77E39 /* NFLPredictions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFLPredictions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		871724F21F53B65F00D77E39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		871724F41F53B65F00D77E39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		871724F41F53B65F00D77E39 /* StandingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsController.swift; sourceTree = "<group>"; };
 		871724F71F53B65F00D77E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		871724FA1F53B65F00D77E39 /* NFLPredictions.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NFLPredictions.xcdatamodel; sourceTree = "<group>"; };
 		871724FC1F53B65F00D77E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				871724F21F53B65F00D77E39 /* AppDelegate.swift */,
-				871724F41F53B65F00D77E39 /* ViewController.swift */,
+				871724F41F53B65F00D77E39 /* StandingsController.swift */,
+				871066F51F53BA7D00BB1714 /* Extensions.swift */,
+				871066F71F53BBBA00BB1714 /* BaseCell.swift */,
+				871066F91F53BBC200BB1714 /* StandingsCell.swift */,
 				871724F61F53B65F00D77E39 /* Main.storyboard */,
 				871724FC1F53B65F00D77E39 /* Assets.xcassets */,
 				871724FE1F53B65F00D77E39 /* LaunchScreen.storyboard */,
@@ -266,8 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				871724FB1F53B65F00D77E39 /* NFLPredictions.xcdatamodeld in Sources */,
-				871724F51F53B65F00D77E39 /* ViewController.swift in Sources */,
+				871724F51F53B65F00D77E39 /* StandingsController.swift in Sources */,
 				871724F31F53B65F00D77E39 /* AppDelegate.swift in Sources */,
+				871066F81F53BBBA00BB1714 /* BaseCell.swift in Sources */,
+				871066F61F53BA7D00BB1714 /* Extensions.swift in Sources */,
+				871066FA1F53BBC200BB1714 /* StandingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +530,7 @@
 				8717251C1F53B65F00D77E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8717251D1F53B65F00D77E39 /* Build configuration list for PBXNativeTarget "NFLPredictionsTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +539,7 @@
 				8717251F1F53B65F00D77E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		871725201F53B65F00D77E39 /* Build configuration list for PBXNativeTarget "NFLPredictionsUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +548,7 @@
 				871725221F53B65F00D77E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
