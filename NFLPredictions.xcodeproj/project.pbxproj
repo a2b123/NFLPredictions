@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A43FBD68DE080F0BD2557BF /* Pods_NFLPredictions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1E08D4553EA13B8B04318C /* Pods_NFLPredictions.framework */; };
+		827607693C0C1EF338428B4E /* Pods_NFLPredictionsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93C0A032554CCCB5F893DEA /* Pods_NFLPredictionsUITests.framework */; };
 		871066F61F53BA7D00BB1714 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871066F51F53BA7D00BB1714 /* Extensions.swift */; };
 		871066F81F53BBBA00BB1714 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871066F71F53BBBA00BB1714 /* BaseCell.swift */; };
 		871066FA1F53BBC200BB1714 /* StandingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871066F91F53BBC200BB1714 /* StandingsCell.swift */; };
@@ -18,6 +20,16 @@
 		871725001F53B65F00D77E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871724FE1F53B65F00D77E39 /* LaunchScreen.storyboard */; };
 		8717250B1F53B65F00D77E39 /* NFLPredictionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8717250A1F53B65F00D77E39 /* NFLPredictionsTests.swift */; };
 		871725161F53B65F00D77E39 /* NFLPredictionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871725151F53B65F00D77E39 /* NFLPredictionsUITests.swift */; };
+		8782E3261F58F23F005697F1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8782E3251F58F23F005697F1 /* GoogleService-Info.plist */; };
+		8782E32D1F58F3EF005697F1 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8782E32C1F58F3EF005697F1 /* RegisterController.swift */; };
+		8782E32F1F58F409005697F1 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8782E32E1F58F409005697F1 /* Header.swift */; };
+		8782E3311F58F4F7005697F1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8782E3301F58F4F7005697F1 /* DataManager.swift */; };
+		8782E35F1F593423005697F1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8782E35E1F593423005697F1 /* TabBarController.swift */; };
+		8782E3611F593A8D005697F1 /* TeamInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8782E3601F593A8C005697F1 /* TeamInfoController.swift */; };
+		8782E3631F599F98005697F1 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8782E3621F599F98005697F1 /* Network.swift */; };
+		8782E3651F599FC6005697F1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8782E3641F599FC6005697F1 /* Game.swift */; };
+		8782E3671F599FF8005697F1 /* Stadium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8782E3661F599FF8005697F1 /* Stadium.swift */; };
+		89193CFB8D3D17C55C738EB0 /* Pods_NFLPredictionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAE0F08F7D83D8257A4CAA8 /* Pods_NFLPredictionsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		324DD698CC94D396B84DD10F /* Pods-NFLPredictions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFLPredictions.release.xcconfig"; path = "Pods/Target Support Files/Pods-NFLPredictions/Pods-NFLPredictions.release.xcconfig"; sourceTree = "<group>"; };
+		4CAE0F08F7D83D8257A4CAA8 /* Pods_NFLPredictionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFLPredictionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		742CE6C56E58EFB037D42157 /* Pods-NFLPredictions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFLPredictions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NFLPredictions/Pods-NFLPredictions.debug.xcconfig"; sourceTree = "<group>"; };
+		75B9B78947DF4ADFBF6BD61F /* Pods-NFLPredictionsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFLPredictionsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NFLPredictionsUITests/Pods-NFLPredictionsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7CCB12A0584B06C467E94EB6 /* Pods-NFLPredictionsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFLPredictionsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NFLPredictionsUITests/Pods-NFLPredictionsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		871066F51F53BA7D00BB1714 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		871066F71F53BBBA00BB1714 /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		871066F91F53BBC200BB1714 /* StandingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandingsCell.swift; sourceTree = "<group>"; };
@@ -55,6 +72,19 @@
 		871725111F53B65F00D77E39 /* NFLPredictionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NFLPredictionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		871725151F53B65F00D77E39 /* NFLPredictionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFLPredictionsUITests.swift; sourceTree = "<group>"; };
 		871725171F53B65F00D77E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8782E3251F58F23F005697F1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8782E32C1F58F3EF005697F1 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		8782E32E1F58F409005697F1 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		8782E3301F58F4F7005697F1 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		8782E35E1F593423005697F1 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		8782E3601F593A8C005697F1 /* TeamInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamInfoController.swift; sourceTree = "<group>"; };
+		8782E3621F599F98005697F1 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		8782E3641F599FC6005697F1 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8782E3661F599FF8005697F1 /* Stadium.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stadium.swift; sourceTree = "<group>"; };
+		A652E50FA056A4A7319A4E5B /* Pods-NFLPredictionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFLPredictionsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NFLPredictionsTests/Pods-NFLPredictionsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A93C0A032554CCCB5F893DEA /* Pods_NFLPredictionsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFLPredictionsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1E08D4553EA13B8B04318C /* Pods_NFLPredictions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFLPredictions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CACBCAAE11351D69EEE533 /* Pods-NFLPredictionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFLPredictionsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NFLPredictionsTests/Pods-NFLPredictionsTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A43FBD68DE080F0BD2557BF /* Pods_NFLPredictions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89193CFB8D3D17C55C738EB0 /* Pods_NFLPredictionsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827607693C0C1EF338428B4E /* Pods_NFLPredictionsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +122,8 @@
 				871725091F53B65F00D77E39 /* NFLPredictionsTests */,
 				871725141F53B65F00D77E39 /* NFLPredictionsUITests */,
 				871724F01F53B65F00D77E39 /* Products */,
+				D617295C970BCEAA5FC8CBB8 /* Pods */,
+				A5F5FD605DDE298F2101DD09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,15 +141,15 @@
 			isa = PBXGroup;
 			children = (
 				871724F21F53B65F00D77E39 /* AppDelegate.swift */,
-				871724F41F53B65F00D77E39 /* StandingsController.swift */,
-				871066F51F53BA7D00BB1714 /* Extensions.swift */,
-				871066F71F53BBBA00BB1714 /* BaseCell.swift */,
-				871066F91F53BBC200BB1714 /* StandingsCell.swift */,
-				871724F61F53B65F00D77E39 /* Main.storyboard */,
+				8782E32A1F58F314005697F1 /* Managers */,
+				8782E3291F58F30E005697F1 /* Extensions */,
+				8782E3281F58F2D8005697F1 /* Model */,
+				8782E32B1F58F31D005697F1 /* Views */,
+				8782E3271F58F2D1005697F1 /* Controller */,
 				871724FC1F53B65F00D77E39 /* Assets.xcassets */,
 				871724FE1F53B65F00D77E39 /* LaunchScreen.storyboard */,
 				871725011F53B65F00D77E39 /* Info.plist */,
-				871724F91F53B65F00D77E39 /* NFLPredictions.xcdatamodeld */,
+				8782E3251F58F23F005697F1 /* GoogleService-Info.plist */,
 			);
 			path = NFLPredictions;
 			sourceTree = "<group>";
@@ -137,6 +172,78 @@
 			path = NFLPredictionsUITests;
 			sourceTree = "<group>";
 		};
+		8782E3271F58F2D1005697F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				871724F41F53B65F00D77E39 /* StandingsController.swift */,
+				8782E32C1F58F3EF005697F1 /* RegisterController.swift */,
+				8782E35E1F593423005697F1 /* TabBarController.swift */,
+				8782E3601F593A8C005697F1 /* TeamInfoController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8782E3281F58F2D8005697F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				871724F91F53B65F00D77E39 /* NFLPredictions.xcdatamodeld */,
+				8782E3621F599F98005697F1 /* Network.swift */,
+				8782E3641F599FC6005697F1 /* Game.swift */,
+				8782E3661F599FF8005697F1 /* Stadium.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8782E3291F58F30E005697F1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				871066F51F53BA7D00BB1714 /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		8782E32A1F58F314005697F1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8782E3301F58F4F7005697F1 /* DataManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		8782E32B1F58F31D005697F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				871066F71F53BBBA00BB1714 /* BaseCell.swift */,
+				871066F91F53BBC200BB1714 /* StandingsCell.swift */,
+				871724F61F53B65F00D77E39 /* Main.storyboard */,
+				8782E32E1F58F409005697F1 /* Header.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A5F5FD605DDE298F2101DD09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB1E08D4553EA13B8B04318C /* Pods_NFLPredictions.framework */,
+				4CAE0F08F7D83D8257A4CAA8 /* Pods_NFLPredictionsTests.framework */,
+				A93C0A032554CCCB5F893DEA /* Pods_NFLPredictionsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D617295C970BCEAA5FC8CBB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				742CE6C56E58EFB037D42157 /* Pods-NFLPredictions.debug.xcconfig */,
+				324DD698CC94D396B84DD10F /* Pods-NFLPredictions.release.xcconfig */,
+				A652E50FA056A4A7319A4E5B /* Pods-NFLPredictionsTests.debug.xcconfig */,
+				F3CACBCAAE11351D69EEE533 /* Pods-NFLPredictionsTests.release.xcconfig */,
+				75B9B78947DF4ADFBF6BD61F /* Pods-NFLPredictionsUITests.debug.xcconfig */,
+				7CCB12A0584B06C467E94EB6 /* Pods-NFLPredictionsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8717251A1F53B65F00D77E39 /* Build configuration list for PBXNativeTarget "NFLPredictions" */;
 			buildPhases = (
+				618515C64624C71140657790 /* [CP] Check Pods Manifest.lock */,
 				871724EB1F53B65F00D77E39 /* Sources */,
 				871724EC1F53B65F00D77E39 /* Frameworks */,
 				871724ED1F53B65F00D77E39 /* Resources */,
+				A9DD123F1B07481487AC3A36 /* [CP] Embed Pods Frameworks */,
+				1D1B08F3B04E03A8899EB052 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,9 +271,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8717251D1F53B65F00D77E39 /* Build configuration list for PBXNativeTarget "NFLPredictionsTests" */;
 			buildPhases = (
+				DE2AB9707E17FDA6A5D1B68D /* [CP] Check Pods Manifest.lock */,
 				871725021F53B65F00D77E39 /* Sources */,
 				871725031F53B65F00D77E39 /* Frameworks */,
 				871725041F53B65F00D77E39 /* Resources */,
+				B0F53F01EDD6AE25E034298E /* [CP] Embed Pods Frameworks */,
+				BF8A04A522D553C63A863D13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +292,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 871725201F53B65F00D77E39 /* Build configuration list for PBXNativeTarget "NFLPredictionsUITests" */;
 			buildPhases = (
+				1E65B5715C63AFAA6A9D5962 /* [CP] Check Pods Manifest.lock */,
 				8717250D1F53B65F00D77E39 /* Sources */,
 				8717250E1F53B65F00D77E39 /* Frameworks */,
 				8717250F1F53B65F00D77E39 /* Resources */,
+				76BA23DC4747795E615D9331 /* [CP] Embed Pods Frameworks */,
+				520A0EC6F8E836889FBC69F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8782E3261F58F23F005697F1 /* GoogleService-Info.plist in Resources */,
 				871725001F53B65F00D77E39 /* LaunchScreen.storyboard in Resources */,
 				871724FD1F53B65F00D77E39 /* Assets.xcassets in Resources */,
 				871724F81F53B65F00D77E39 /* Main.storyboard in Resources */,
@@ -269,14 +386,160 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D1B08F3B04E03A8899EB052 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NFLPredictions/Pods-NFLPredictions-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E65B5715C63AFAA6A9D5962 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		520A0EC6F8E836889FBC69F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NFLPredictionsUITests/Pods-NFLPredictionsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		618515C64624C71140657790 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		76BA23DC4747795E615D9331 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NFLPredictionsUITests/Pods-NFLPredictionsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9DD123F1B07481487AC3A36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NFLPredictions/Pods-NFLPredictions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0F53F01EDD6AE25E034298E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NFLPredictionsTests/Pods-NFLPredictionsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF8A04A522D553C63A863D13 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NFLPredictionsTests/Pods-NFLPredictionsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE2AB9707E17FDA6A5D1B68D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		871724EB1F53B65F00D77E39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8782E3311F58F4F7005697F1 /* DataManager.swift in Sources */,
+				8782E3671F599FF8005697F1 /* Stadium.swift in Sources */,
 				871724FB1F53B65F00D77E39 /* NFLPredictions.xcdatamodeld in Sources */,
+				8782E3631F599F98005697F1 /* Network.swift in Sources */,
+				8782E3651F599FC6005697F1 /* Game.swift in Sources */,
 				871724F51F53B65F00D77E39 /* StandingsController.swift in Sources */,
+				8782E3611F593A8D005697F1 /* TeamInfoController.swift in Sources */,
+				8782E35F1F593423005697F1 /* TabBarController.swift in Sources */,
 				871724F31F53B65F00D77E39 /* AppDelegate.swift in Sources */,
+				8782E32F1F58F409005697F1 /* Header.swift in Sources */,
+				8782E32D1F58F3EF005697F1 /* RegisterController.swift in Sources */,
 				871066F81F53BBBA00BB1714 /* BaseCell.swift in Sources */,
 				871066F61F53BA7D00BB1714 /* Extensions.swift in Sources */,
 				871066FA1F53BBC200BB1714 /* StandingsCell.swift in Sources */,
@@ -429,6 +692,7 @@
 		};
 		8717251B1F53B65F00D77E39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 742CE6C56E58EFB037D42157 /* Pods-NFLPredictions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 465955C7HD;
@@ -442,6 +706,7 @@
 		};
 		8717251C1F53B65F00D77E39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 324DD698CC94D396B84DD10F /* Pods-NFLPredictions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 465955C7HD;
@@ -455,6 +720,7 @@
 		};
 		8717251E1F53B65F00D77E39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A652E50FA056A4A7319A4E5B /* Pods-NFLPredictionsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -470,6 +736,7 @@
 		};
 		8717251F1F53B65F00D77E39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3CACBCAAE11351D69EEE533 /* Pods-NFLPredictionsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +752,7 @@
 		};
 		871725211F53B65F00D77E39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75B9B78947DF4ADFBF6BD61F /* Pods-NFLPredictionsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 465955C7HD;
@@ -499,6 +767,7 @@
 		};
 		871725221F53B65F00D77E39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CCB12A0584B06C467E94EB6 /* Pods-NFLPredictionsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 465955C7HD;
