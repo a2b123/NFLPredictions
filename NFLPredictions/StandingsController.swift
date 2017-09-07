@@ -32,7 +32,7 @@ class StandingsController: UICollectionViewController, UICollectionViewDelegateF
     let divisionHeader = "divisionHeader"
 
     
-    var nflDivision = ["NFC North", "NFC East", "NFC South", "NFC West", "AFC North", "AFC East", "AFC South", "AFC West"]
+    var nflDivision = ["AFC North", "AFC East", "AFC South", "AFC West", "NFC East", "NFC North", "NFC South", "NFC West"]
     
     // AFC East
     let afcEast = ["New England Patriots", "Miami Dolphins", "New York Jets", "Buffalo Bills"]
@@ -59,10 +59,14 @@ class StandingsController: UICollectionViewController, UICollectionViewDelegateF
     let nfcDivisions = ["NFC North", "NFC East", "NFC South", "NFC West"]
 
     
-    let nflTeamData: [String] = ["New England Patriots", "Miami Dolphins", "New York Jets", "Buffalo Bills", "Baltimore Ravens", "Cincinnati Bengals", "Pittsburgh Steelers", "Cleveland Browns", "Tampa Bay Buccaneers", "New Orleans Saints", "Carolina Panthers", "Atlanta Falcons", "San Francisco 49ers", "Seattle Seahawks", "Arizona Cardinals", "Los Angeles Rams"]
-    
-    let nflArray: [String] = ["New England Patriots", "Miami Dolphins", "New York Jets", "Buffalo Bills", "Baltimore Ravens", "Cincinnati Bengals", "Pittsburgh Steelers", "Cleveland Browns", "Houston Texans", "Jacksonville Jaguars", "Indianapolis Colts", "Tennessee Titans", "Kansas City Cheifs", "Denver Broncos", "Oakland Raiders", "Los Angeles Chargers", "New York Giants", "Philadelphia Eagles", "Washington Redskins", "Dallas Cowboys", "Minnesota Vikings", "Green Bay Packers", "Detriot Lions", "Chicago Bears", "Tampa Bay Buccaneers", "New Orleans Saints", "Carolina Panthers", "Atlanta Falcons", "San Francisco 49ers", "Seattle Seahawks", "Arizona Cardinals", "Los Angeles Rams"]
+    let nflArrayWithImageNames: [(String, String)] = [("New England Patriots", "patriots"), ("Miami Dolphins", "dolphins"), ("New York Jets", "jets"), ("Buffalo Bills", "bills"), ("Baltimore Ravens", "ravens"), ("Cincinnati Bengals", "bengals"), ("Pittsburgh Steelers", "steelers"), ("Cleveland Browns", "browns"), ("Houston Texans", "texans"), ("Jacksonville Jaguars", "jaguars"), ("Indianapolis Colts", "colts"), ("Tennessee Titans", "titans"), ("Kansas City Chiefs", "chiefs"), ("Denver Broncos", "broncos"), ("Oakland Raiders", "raiders"), ("Los Angeles Chargers", "chargers"), ("New York Giants", "giants"), ("Philadelphia Eagles", "eagles"), ("Washington Redskins", "redskins"), ("Dallas Cowboys", "cowboys"), ("Minnesota Vikings", "vikings"), ("Green Bay Packers", "packers"), ("Detriot Lions", "lions"), ("Chicago Bears", "bears"), ("Tampa Bay Buccaneers", "buccaneers"), ("New Orleans Saints", "saints"), ("Carolina Panthers", "panthers"), ("Atlanta Falcons", "falcons"), ("San Francisco 49ers", "49ers"), ("Seattle Seahawks", "seahawks"), ("Arizona Cardinals", "cardinals"), ("Los Angeles Rams", "rams"), ("nfl", "nfl50")]
 
+    
+    let nflArrayWithImages: [(String, UIImage)] = [("New England Patriots", #imageLiteral(resourceName: "patriots")), ("Miami Dolphins", #imageLiteral(resourceName: "dolphins")), ("New York Jets", #imageLiteral(resourceName: "jets")), ("Buffalo Bills", #imageLiteral(resourceName: "bills")), ("Baltimore Ravens", #imageLiteral(resourceName: "ravens")), ("Cincinnati Bengals", #imageLiteral(resourceName: "bengals")), ("Pittsburgh Steelers", #imageLiteral(resourceName: "steelers")), ("Cleveland Browns", #imageLiteral(resourceName: "browns")), ("Houston Texans", #imageLiteral(resourceName: "texans")), ("Jacksonville Jaguars", #imageLiteral(resourceName: "jaguars")), ("Indianapolis Colts", #imageLiteral(resourceName: "colts")), ("Tennessee Titans", #imageLiteral(resourceName: "titans")), ("Kansas City Cheifs", #imageLiteral(resourceName: "chiefs")), ("Denver Broncos", #imageLiteral(resourceName: "broncos")), ("Oakland Raiders", #imageLiteral(resourceName: "raiders")), ("Los Angeles Chargers", #imageLiteral(resourceName: "chargers")), ("New York Giants", #imageLiteral(resourceName: "giants")), ("Philadelphia Eagles", #imageLiteral(resourceName: "eagles")), ("Washington Redskins", #imageLiteral(resourceName: "redskins")), ("Dallas Cowboys", #imageLiteral(resourceName: "cowboys")), ("Minnesota Vikings", #imageLiteral(resourceName: "vikings")), ("Green Bay Packers", #imageLiteral(resourceName: "packers")), ("Detriot Lions", #imageLiteral(resourceName: "lions")), ("Chicago Bears", #imageLiteral(resourceName: "bears")), ("Tampa Bay Buccaneers", #imageLiteral(resourceName: "buccaneers")), ("New Orleans Saints", #imageLiteral(resourceName: "saints")), ("Carolina Panthers", #imageLiteral(resourceName: "panthers")), ("Atlanta Falcons", #imageLiteral(resourceName: "falcons")), ("San Francisco 49ers", #imageLiteral(resourceName: "49ers")), ("Seattle Seahawks", #imageLiteral(resourceName: "seahawks")), ("Arizona Cardinals", #imageLiteral(resourceName: "cardinals")), ("Los Angeles Rams", #imageLiteral(resourceName: "rams")), ("nfl", #imageLiteral(resourceName: "nfl50"))]
+
+    let nflArray: [String] = ["New England Patriots", "Miami Dolphins", "New York Jets", "Buffalo Bills", "Baltimore Ravens", "Cincinnati Bengals", "Pittsburgh Steelers", "Cleveland Browns", "Houston Texans", "Jacksonville Jaguars", "Indianapolis Colts", "Tennessee Titans", "Kansas City Cheifs", "Denver Broncos", "Oakland Raiders", "Los Angeles Chargers", "New York Giants", "Philadelphia Eagles", "Washington Redskins", "Dallas Cowboys", "Minnesota Vikings", "Green Bay Packers", "Detriot Lions", "Chicago Bears", "Tampa Bay Buccaneers", "New Orleans Saints", "Carolina Panthers", "Atlanta Falcons", "San Francisco 49ers", "Seattle Seahawks", "Arizona Cardinals", "Los Angeles Rams", "foo"]
+
+    
     let nflDictionary: [String: String] = ["New England Patriots" : "1", // AFC East 1
                                            "Miami Dolphins" : "2", // AFC East 2
                                            "New York Jets": "3", // AFC East 3
@@ -177,65 +181,35 @@ class StandingsController: UICollectionViewController, UICollectionViewDelegateF
     
     //MARK: CoreData
     func addDummyData() {
+        
         let moc = DataManager.sharedInstance.persistentContainer.viewContext
         
+        var divisionLevel = 0
         for div in nflDivision {
             let division = NSEntityDescription.insertNewObject(forEntityName: "Division", into: moc) as! Division
             print(div)
             division.name = div
-            addTeams(division: division)
+            addTeams(division: division, divisionLevel: divisionLevel)
+            divisionLevel = divisionLevel + 1
         }
+    
         
         DataManager.sharedInstance.saveContext()
     }
     
-    func addTeams(division: Division) {
+    func addTeams(division: Division, divisionLevel: Int) {
         let moc = DataManager.sharedInstance.persistentContainer.viewContext
-
-        // Option 1
-//        var i = 0
-//        while i < 4 {
-//            for (key, value) in nflDictionary {
-//                print("\(key): \(value)")
-//                let team = NSEntityDescription.insertNewObject(forEntityName: "Team", into: moc) as! Team
-//                let sortedValues = nflDictionary.values.sorted()
-//                //                print("Sorted Values:", sortedValues)
-//                team.name = "\(key) - \(value)"
-//                team.id = Int64(value)!
-//                i += 1
-//                division.addToTeams(team)
-//            }
-//            
-//        }
         
-        // Option 2
-        var teams = [[String:Any]]()
-        var i = 0
-        var team = [String:Any]()
-        for (index, teamName) in nflTeamData.enumerated() {
+        for index in divisionLevel * 4..<(divisionLevel * 4) + 4 {
             let team = NSEntityDescription.insertNewObject(forEntityName: "Team", into: moc) as! Team
-            i = (i % 4) == 0 ? 1 : i + 1
-            team.name = "\(teamName) - \(i)"
-            print(team.name)
-            team.id = Int64(i)
-//            team["name"] = "\(teamName) - \(i)"
-//            team["id"] = Int64(i)
+            team.name = "\(nflArrayWithImages[index].0) - \(index)"
+            team.imageName = nflArrayWithImageNames[index].1
+//            if let teamName = team.name {
+//                print(teamName)
+//            }
+            team.id = Int64(index)
             division.addToTeams(team)
         }
-
-        // Option 3
-//        var i = 1
-//        while i < 5 {
-//            let team = NSEntityDescription.insertNewObject(forEntityName: "Team", into: moc) as! Team
-//            
-//            for (index, teamName) in nflTeamData.enumerated() {
-//                print(index, teamName)
-//            }
-//            team.name = "\(nflTeamData[i]) - \(i)"
-//            team.id = Int64(i)
-//            i += 1
-//            division.addToTeams(team)
-//        }
     }
     
     //MARK: CollectionView
@@ -245,7 +219,7 @@ class StandingsController: UICollectionViewController, UICollectionViewDelegateF
         let division = divisions[indexPath.section]
         let team = division.teams?[indexPath.row] as! Team
         cell.teamLabel.text = team.name
-        cell.teamLogo.image = #imageLiteral(resourceName: "nfl58")
+        cell.teamLogo.image = UIImage(named: team.imageName!)
         cell.winTextField.delegate = self
         cell.lossTextField.delegate = self
         cell.winTextField.tag = 0 //Increment accordingly

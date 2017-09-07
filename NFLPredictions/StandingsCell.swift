@@ -16,19 +16,24 @@ class StandingsCell: BaseCell, UITextFieldDelegate {
         iv.contentMode = .scaleAspectFill
         iv.layer.masksToBounds = true
         iv.clipsToBounds = true
-        iv.backgroundColor = .green
+        iv.layer.cornerRadius = 24
+        iv.backgroundColor = .white
         return iv
     }()
     
     let teamLabel: UILabel = {
         let label = UILabel()
         label.text = "Team"
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.numberOfLines = 0
+        label.textColor = .white
         return label
     }()
     
     let winTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "W"
+        tf.textColor = .white
         tf.setBottomBorder()
         tf.keyboardType = .numberPad
         tf.returnKeyType = .done
@@ -41,6 +46,7 @@ class StandingsCell: BaseCell, UITextFieldDelegate {
     let lossTextField: UITextField = {
         let tf = UITextField()
         tf.placeholder = "L"
+        tf.textColor = .white
         tf.setBottomBorder()
         tf.keyboardType = .numberPad
         tf.returnKeyType = .done
@@ -64,9 +70,9 @@ class StandingsCell: BaseCell, UITextFieldDelegate {
         teamRecordStackView.spacing = 10
         addSubview(teamRecordStackView)
         
-        addConstraintsWithFormat(format: "H:|-14-[v0(44)]-10-[v1]-10-[v2(120)]-10-|", views: teamLogo, teamLabel, teamRecordStackView)
+        addConstraintsWithFormat(format: "H:|-14-[v0(48)]-10-[v1]-10-[v2(120)]-10-|", views: teamLogo, teamLabel, teamRecordStackView)
         addConstraintsWithFormat(format: "V:|[v0]|", views: teamLabel)
-        addConstraintsWithFormat(format: "V:[v0(44)]", views: teamLogo)
+        addConstraintsWithFormat(format: "V:[v0(48)]", views: teamLogo)
         addConstraintsWithFormat(format: "V:[v0(30)]", views: teamRecordStackView)
         
         addConstraint(NSLayoutConstraint(item: teamLogo, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
